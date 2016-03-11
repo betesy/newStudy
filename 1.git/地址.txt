@@ -1,0 +1,57 @@
+美团技术   http://tech.meituan.com/
+作业地址： https://github.com/zhufengnodejs/201601node
+github     https://github.com/     
+npm        https://www.npmjs.com/ 
+环境变量   计算机 --> 属性 --> 高级系统设置 --> 高级 --> 环境变量 
+Terminal   View  -->  Tool Windows  -->  Terminal     (和CMD相同)
+github日常管理视频  http://www.zhufengpeixun.com/org/510/course?categoryId=215024&cateLevel=2&serviceType=totalCourse&chargeType=0#orgTab
+learn git 小游戏    http://pcottle.github.io/learnGitBranching/
+游戏参考            https://github.com/zhufengnodejs/201601node/blob/master/1.git/learnGitBranching.md
+谷歌缓存            chrome://net-internals/#dns
+有道云笔记          http://note.youdao.com/share/?id=c57f142878ba3adfa5cec47851a824ac&type=note
+host所在目录        C:\Windows\System32\drivers\etc
+ajax文档            https://github.com/YataoZhang/personal_project
+作业                https://github.com/zhufengnodejs/201601node_homework/tree/master/%E7%BB%83%E4%B9%A0
+全栈视频            http://www.zhufengpeixun.cn/course/2
+第一天              http://www.zhufengpeixun.cn/course/25
+
+作业地址
+https://github.com/zhufengnodejs/201601node/blob/master/homework/%E7%AC%AC%E4%B8%80%E5%91%A8%E4%BD%9C%E4%B8%9A.md
+交至
+https://github.com/zhufengnodejs/201601node_homework
+如果不会交请看教程
+git 基础教程
+http://school.zhufengpeixun.cn/course/31
+git交作业视频
+http://www.zhufengpeixun.com/org/510/course?categoryId=215024&cateLevel=2&serviceType=totalCourse&chargeType=0#orgTab
+
+
+Content-Type 对照表：
+http://tool.oschina.net/commons
+
+根据文件扩展名返回其 MIME 类型的模块：
+https://www.npmjs.com/package/mime
+
+一个比较完善的静态文件中间件：
+https://www.npmjs.com/package/serve-static
+
+浏览器访问网页过程中发生了什么？
+http://www.tuicool.com/articles/EJRfAz
+
+Node.js API文档：
+https://nodejs.org/api
+
+Node.js API文档中文翻译：
+http://nodeapi.ucdok.com/
+
+Favicon： 
+http://zh.wikipedia.org/wiki/Favicon
+
+MIME-TYPE：
+http://zh.wikipedia.org/zh/%E5%A4%9A%E7%94%A8%E9%80%94%E4%BA%92%E8%81%AF%E7%B6%B2%E9%83%B5%E4%BB%B6%E6%93%B4%E5%B1%95
+
+Express.js文档：
+http://expressjs.com
+
+Express.js文档中文翻译：
+http://expressjs.jser.us/
