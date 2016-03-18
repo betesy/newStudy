@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--当get请求时，get没有请求体，就把查询字符串放到url里面;
+如果是post请求时，他有请求体，所以发送服务的时候，他把表单放到请求体里面，不会出现在url后边;-->
+    <form action="" name="userform" method="get"><!--get请求设置-->
+        用户名： <input type="text" name="username"><br>
+        密  码：<input type="text" name="password"><br>
+        <button id="regBtn">注册</button>
+        <input type="submit" value="提交">
+    </form>
+</body>
+<script>
+    //序列化
+    function serialize(form){
+        //把表单中的元素集合转成一个数组
+        var elements = Array.prototype.slice.call(form.elements);//转成数组
+        //循环这个数组
+        var data = [];
+        elements.forEach(function(element){
+            //先取出元素的类型
+            var type = element.type;
+            switch(type){
+                case 'submit':
+                case 'cancel':
+                case 'reset':
+                    break;
+                case 'text':
+                    data.push(element.name+'='+element.value);
+            }
+        });
+        return data.join('&');//数组转成字符串,通过&将他们连接在一起
+    }
+    window.onload = function(){
+        document.querySelector('#regBtn').addEventListener('click',function(){
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST','/reg',true);
+            xhr.responseType = 'text';
+            xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');//更严谨,序列化表单
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState == 4 && /2\d{2}/.test(xhr.status)){
+                    console.log(xhr.responseText);
+                }
+            }
+            //把表单的值 转成查询字符串
+            var data = serialize(document.querySelector('form'));
+            console.log(data);
+            //把数据放在请求体里发送给服务器
+            xhr.send(data);
+            return false;
+        });
+    }
+
+</script>
+</html>

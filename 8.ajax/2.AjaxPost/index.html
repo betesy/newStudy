@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <form action="" name="userform">
+        用户名： <input type="text" name="username"><br>
+        密  码：<input type="text" name="password"><br>
+        <button id="regBtn">注册</button>
+    </form>
+</body>
+<script>
+    //序列化
+    function serialize(form){
+        //把表单中的元素集合转成一个数组
+        var elements = Array.prototype.slice.call(form.elements);//转成数组
+        //循环这个数组
+        var data = [];
+        elements.forEach(function(element){
+            //先取出元素的类型
+            var type = element.type;
+            switch(type){
+                case 'submit':
+                case 'cancel':
+                case 'reset':
+                    break;
+                case 'text':
+                    data.push(element.name+'='+element.value);
+            }
+        });
+        return data.join('&');//数组转成字符串,通过&将他们连接在一起
+    }
+    window.onload = function(){
+        document.querySelector('#regBtn').addEventListener('click',function(){
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST','books.json',true);
+            xhr.responseType = 'text';
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState == 4 && /2\d{2}/.test(xhr.status)){
+
+                }
+            }
+            var data = serialize(document.querySelector('form'));
+            console.log(data);
+            xhr.send(data);
+        });
+    }
+
+</script>
+</html>
